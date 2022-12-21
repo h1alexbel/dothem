@@ -18,4 +18,4 @@ jobs:
       - name: Check Gradle version
         run: gradle -version
       - name: Run Gradle Build and tests
-        run: gradle clean build test
+        run: gradle clean build bootJar
