@@ -1,2 +1,2 @@
-gradle clean bootJar
+./gradle clean bootJar
 docker compose up -d
