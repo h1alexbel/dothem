@@ -4,6 +4,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+permissions:
+  contents: read
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,9 +22,11 @@ jobs:
       - name: Run Gradle Build and tests
         run: gradle clean build bootJar
       - name: Build and Push to Docker Hub
-        uses: mr-smithers-excellent/docker-build-push@v4
+        uses: mr-smithers-excellent/docker-build-push@v5
         with:
           image: abialiauski/dothem-backlog
+          tags: 0.0.$GITHUB_RUN_NUMBER, latest
+          dockerfile: Dockerfile
           registry: docker.io
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
