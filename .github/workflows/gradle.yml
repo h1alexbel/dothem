@@ -1,4 +1,4 @@
-name: Build and Test
+name: Build and Push
 on:
   push:
     branches: [ master ]
@@ -19,3 +19,10 @@ jobs:
         run: gradle -version
       - name: Run Gradle Build and tests
         run: gradle clean build bootJar
+      - name: Build and Push to Docker Hub
+        uses: mr-smithers-excellent/docker-build-push@v4
+        with:
+          image: abialiauski/dothem-backlog
+          registry: docker.io
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
