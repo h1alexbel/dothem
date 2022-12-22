@@ -1,6 +1,6 @@
 FROM bellsoft/liberica-openjdk-alpine:17 as build
 WORKDIR application
-ARG JAR_FILE=build/libs/*.jar
+ARG JAR_FILE=build/libs/dothem.backlog-0.0.1.jar
 COPY ${JAR_FILE} app.jar
 RUN java -Djarmode=layertools -jar app.jar extract
 FROM bellsoft/liberica-openjdk-alpine:17
