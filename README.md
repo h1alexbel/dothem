@@ -1,5 +1,6 @@
 
 [![Build and Push](https://github.com/h1alexbel/dothem/actions/workflows/gradle.yml/badge.svg)](https://github.com/h1alexbel/dothem/actions/workflows/gradle.yml)
+[![Docker](https://img.shields.io/docker/v/abialiauski/dothem-backlog/latest)](https://img.shields.io/docker/v/abialiauski/dothem-backlog/latest)
 
 Dothem is the Personal Backlog of Tasks integrated with [GitHub](https://github.com), [Jira](https://www.atlassian.com/software/jira), and [Todoist](https://todoist.com/app/)
 
