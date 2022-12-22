@@ -1,6 +1,5 @@
 
-[![Build and Test](https://github.com/h1alexbel/dothem/actions/workflows/gradle.yml/badge.svg)](https://github.com/h1alexbel/dothem/actions/workflows/gradle.yml)
-[![Docker Image CI](https://github.com/h1alexbel/dothem/actions/workflows/docker-image.yml/badge.svg)](https://github.com/h1alexbel/dothem/actions/workflows/docker-image.yml)
+[![Build and Push](https://github.com/h1alexbel/dothem/actions/workflows/gradle.yml/badge.svg)](https://github.com/h1alexbel/dothem/actions/workflows/gradle.yml)
 
 Dothem is the Personal Backlog of Tasks integrated with [GitHub](https://github.com), [Jira](https://www.atlassian.com/software/jira), and [Todoist](https://todoist.com/app/)
 
@@ -9,7 +8,7 @@ Dothem is the Personal Backlog of Tasks integrated with [GitHub](https://github.
 - Create tickets for all projects from one place
 
 # Prerequisites
-You need to have [```Docker```](https://www.docker.com), and ```Java 17+``` installed.
+You need to have [```Docker```](https://www.docker.com), ```Java 17+```, and [```Gradle 7```](https://docs.gradle.org) installed.
 
 # Quick Start
 
@@ -17,3 +16,4 @@ Run this script to start the application
 ```shell
 $ sh up.sh
 ```
+then provide your ```GitHub Token``` along with ```Todoist Token```
