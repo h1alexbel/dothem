@@ -6,7 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication
 @SpringBootApplication
 class BacklogApplication {
 
-    static void main(String[] args) {
-        SpringApplication.run(BacklogApplication, args)
-    }
+  static void main(String[] args) {
+    SpringApplication.run(BacklogApplication, args)
+  }
 }
