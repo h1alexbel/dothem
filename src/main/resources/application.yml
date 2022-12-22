@@ -1,1 +1,27 @@
-
+spring:
+  application:
+    name: dothem-backlog
+server:
+  shutdown: graceful
+logging:
+  level:
+    web: ${LOG_LEVEL}
+    org.dothem: ${LOG_LEVEL}
+  file:
+    path: /
+    name: dothem.backlog.log
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+      base-path: /system
+backlog:
+  github:
+    token: ${GITHUB_TOKEN}
+    api-version: 2022-11-28
+  todoist:
+    token: ${TODOIST_TOKEN}
