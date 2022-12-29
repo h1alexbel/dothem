@@ -1,6 +1,6 @@
 package org.dothem.backlog.api
 
-import org.dothem.backlog.github.CreateGithubIssueRq
+import org.dothem.backlog.github.CreateGitHubIssueRq
 import org.dothem.backlog.github.GitHub
 import org.dothem.backlog.todoist.CreateTodoistTaskRq
 import org.dothem.backlog.todoist.Todoist
@@ -47,7 +47,7 @@ class BacklogApiController {
   @PostMapping
   Flux<CreateTaskRs> createTask(@RequestBody CreateTaskRq request) {
     this.gh.createIssue(
-        new CreateGithubIssueRq(
+        new CreateGitHubIssueRq(
             owner: request.owner,
             repo: request.repo,
             title: request.title,

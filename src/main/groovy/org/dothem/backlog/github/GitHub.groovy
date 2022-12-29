@@ -21,14 +21,25 @@ class GitHub {
   @Autowired
   private WebClient web
 
-  Flux<CreateGitHubIssueRs> createIssue(CreateGithubIssueRq request) {
+  Flux<CreateGitHubIssueRs> createIssue(CreateGitHubIssueRq request) {
     this.web.post()
         .uri("https://api.github.com/repos/${request.owner}/${request.repo}/issues")
         .header("Authorization", "Bearer ${this.token}")
         .header("GitHub-Api-Version", "application/vnd.github+json")
         .header("Accept", this.version)
-        .body(Mono.just(request), CreateGithubIssueRq)
+        .body(Mono.just(request), CreateGitHubIssueRq)
         .retrieve()
         .bodyToFlux(CreateGitHubIssueRs)
+  }
+
+  Flux<Object> createRelease(OwnerRepoRq repo, CreateGitHubReleaseRq request) {
+    this.web.post()
+        .uri("https://api.github.com/repos/${repo.owner}/${repo.repo}/releases")
+        .header("Authorization", "Bearer ${this.token}")
+        .header("GitHub-Api-Version", "application/vnd.github+json")
+        .header("Accept", this.version)
+        .body(Mono.just(request), CreateGitHubReleaseRq)
+        .retrieve()
+        .bodyToFlux(Object)
   }
 }
