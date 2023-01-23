@@ -1,5 +1,0 @@
-architect:
-  - h1alexbel
-merge:
-  script:
-    - "gradle clean build"
