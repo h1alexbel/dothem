@@ -4,5 +4,5 @@ echo provide your Todoist token
 read todoist_token
 export GITHUB_TOKEN=${github_token}
 export TODOIST_TOKEN=${todoist_token}
-gradle clean bootJar
-docker compose up -d
+gradle clean build
+docker compose up -d --build
