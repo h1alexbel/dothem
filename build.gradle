@@ -20,7 +20,7 @@ repositories {
 
 ext {
   set('springBootAdminVersion', "3.0.0")
-  set('springCloudVersion', "2022.0.0")
+  set('springCloudVersion', "2022.0.1")
 }
 
 dependencies {
