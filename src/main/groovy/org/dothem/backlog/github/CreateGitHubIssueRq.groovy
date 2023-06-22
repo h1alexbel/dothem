@@ -9,7 +9,7 @@ import groovy.transform.TupleConstructor
  */
 @TupleConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-class CreateGithubIssueRq {
+class CreateGitHubIssueRq {
 
   String owner
   String repo
